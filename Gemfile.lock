@@ -103,11 +103,18 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    kramdown (2.3.1)
+      rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    maildown (3.3.0)
+      actionmailer (>= 4.0.0)
+      kramdown-parser-gfm
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -219,6 +226,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  maildown
   puma (~> 5.0)
   rails (~> 7.0.1)
   redis (~> 4.0)
