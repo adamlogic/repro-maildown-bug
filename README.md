@@ -1,24 +1,14 @@
-# README
+This is a sample app that reproduces the bug in [this maildown issue](https://github.com/codetriage/maildown/issues/59).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## To reproduce the bug
 
-Things you may want to cover:
+This repo contains a patch in `config/initializers/maildown_patch.rb`. To reproduce the issue, comment out that code.
 
-* Ruby version
+Then, you can either...
 
-* System dependencies
+1. Run `rails s` and try to view either http://localhost:3000 or http://localhost:3000/welcome/index.
+2. Or run `rake test:integration` to run the the simple integration test at `test/integration/welcome_test.rb`.
 
-* Configuration
+## To repro with the fix
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Uncomment the code in `config/initializers/maildown_patch.rb`.
